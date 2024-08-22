@@ -1,0 +1,1486 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Urbanist;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.Header {
+    height: 64px;
+    padding: 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px #AA00FF40;
+}
+
+.Header img {
+    height: 40px;
+    width: 40px;
+}
+
+.NotHamburgerIcon {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.HamburgerMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Header ul li {
+    margin: 16px 24px;
+    font-weight: 400;
+    color: #262626;
+}
+
+
+.Header ul li button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.HamburgerIcon {
+    display: none;
+}
+
+.HamburgerMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+}
+
+.fa-bars,
+.fa-xmark {
+    margin: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.HamburgerIcon div ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.HamburgerIcon div ul li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.HeroSectionPC {
+    height: 516px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../Assets/Assets Desktop/Graph.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: relative;
+}
+
+.HeroSectionPC::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+
+.HeroSectionPCLeft h2 {
+    font-size: 64px;
+    color: #262626;
+    font-weight: 500;
+    width: 521px;
+}
+
+.HeroSectionPCLeft h1 {
+    font-weight: 600;
+    font-size: 80px;
+    background: linear-gradient(270deg, #D300FF 0%, #7C00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 2;
+    margin-bottom: 16px;
+}
+
+.HeroBtn {
+    display: none;
+    width: 128px;
+    height: 35px;
+    padding: 8px 24px;
+    border-radius: 16px;
+    background: #D400FF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms;
+    
+    &:hover{
+        background-color: #800099;
+    }
+
+    &:active{
+        box-shadow: 0px 3px 6px 0px #AA00FF40;
+    }
+}
+
+.HeroSectionPCRight img {
+    width: 320px;
+    height: 320px;
+    z-index: 2;
+    animation-name: ImageRotation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ImageRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    1% {
+        transform: rotate(1deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    30% {
+        transform: rotate(29deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.WhosCamelDigital {
+    width: 100%;
+    height: 206px;
+    padding: 56px 64px;
+}
+
+.Header li button:hover {
+    font-weight: 600;
+}
+
+.Header li button:active {
+    color: #aa00ff;
+}
+
+.WhosCamelDigital h1 {
+    width: 284px;
+    height: 29px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #8000FF;
+    margin: 8px 0 8px 0;
+}
+
+.WhosCamelDigital h2 {
+    max-width: 900px;
+    color: #262626;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.OurServices {
+    padding: 56px 64px;
+}
+
+.Frame1 h1 {
+    width: 328px;
+    color: #8000FF;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.Frame1 h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #262626;
+    margin-top: 8px;
+}
+
+.ServicesDivDesktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.ServicesDivDesktop div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 384px;
+    border-radius: 16px;
+    padding: 32px 48px;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 3px 6px 0px #AA00FF40;
+    margin: 40px 0 20px 0;
+    transition: all 0.3s;
+}
+
+.ServicesDivDesktop div:hover {
+    box-shadow: 0px 6px 16px 0px #AA00FF40;
+}
+
+.ServicesDivDesktop div img {
+    width: 64px;
+    height: 64px;
+    padding: 6.4px;
+    border-radius: 4px 0px 0px 0px;
+}
+
+.ServicesDivDesktop div h1 {
+    width: 156px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #262626;
+    margin-top: 19.2px;
+}
+
+.OurClients {
+    position: relative;
+    width: 100%;
+    height: 301px;
+    background: #AA00FF;
+}
+
+.OurClientsText {
+    position: absolute;
+    width: 119px;
+    height: 29px;
+    top: 56px;
+    left: 64px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.LogoDark {
+    position: absolute;
+    width: 409px;
+    height: 298px;
+    top: 2px;
+    right: 3%;
+    padding: 5.69px 0px 5.65px 0px;
+}
+
+.MediaScroll {
+    position: absolute;
+    width: 100%;
+    height: 128px;
+    top: 117px;
+    padding: 16px 30px;
+    background-image: linear-gradient(#d9d9d937, rgba(211, 123, 255, 0.328));
+    display: grid;
+    gap: 80px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    backdrop-filter: blur(3px);
+}
+
+.MediaScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.WhyChooseUs {
+    padding: 40px 64px;
+    background-image: url('../Assets/Assets Desktop/Why choose us.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.WhyChooseUs h1 {
+    height: 29px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: #8000FF;
+    margin-bottom: 20px;
+}
+
+.WhyChooseUs .Qualities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 960px;
+    margin-bottom: 32px;
+}
+
+.WhyChooseUs .Qualities div {
+    position: relative;
+    width: 451px;
+    height: 197px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px 0px #4D4D4D40;
+    background: #FFFFFF80;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.WhyChooseUs .Qualities div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    padding: 0.5px;
+    background: linear-gradient(90deg, rgba(217, 217, 217, 0.5) 0%, rgba(211, 123, 255, 0.5) 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+
+.WhyChooseUs .Qualities div:hover {
+    box-shadow: 0px 4px 12px 0px #4D4D4D40;
+    backdrop-filter: blur(10px);
+    background: #FFFFFF4D;
+}
+
+.WhyChooseUs img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.WhyChooseUs h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.BookACall {
+    width: 100%;
+    height: 431px;
+    padding: 56px 64px 56px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BookACall h1 {
+    width: 100%;
+    height: 29px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #8000FF;
+}
+
+.Frame3 {
+    width: 982px;
+    height: 258px;
+    margin-top: 32px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    box-shadow: 0px 3px 6px 0px #3E3E3E59;
+    display: flex;
+    padding: 30px;
+}
+
+.Frame5 {
+    width: 440px;
+    height: 194px;
+}
+
+.Frame5 input {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #D9D9D9;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+}
+
+.Frame5 input:focus {
+    outline: 1px solid rgb(183, 183, 183);
+}
+
+.Frame5 button {
+    width: 100px;
+    height: 35px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 16px;
+    background: #D400FF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Frame5 div {
+    position: relative;
+}
+
+.Frame5 div p {
+    position: absolute;
+    bottom: 4%;
+    left: 4.5%;
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+}
+
+.Frame4 {
+    margin: 0 80px;
+    position: relative;
+}
+
+.Frame4 hr {
+    position: absolute;
+    border: none;
+    border-left: 2px solid #BFBFBF;
+    height: 100%;
+    left: 50%;
+}
+
+.Frame4 p {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    color: #BFBFBF;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    padding: 15px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.819);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    height: max-content;
+    padding: 50px 40px;
+}
+
+.popup-content h2 {
+    color: #D400FF;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.popup-content .fa-xmark {
+    position: absolute;
+    font-size: 2rem;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.popup-content svg:hover {
+    transform: scale(1.2);
+}
+
+.popup-content svg:active {
+    transform: scale(0.9);
+}
+
+.Frame6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Frame6 button {
+    height: 35px;
+    padding: 8px 24px;
+    border-radius: 16px;
+    border: none;
+    background-color: #D400FF;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Frame3 button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Frame3 button:hover {
+    background-color: #800099;
+    box-shadow: 0px 6px 16px 0px #AA00FF40;
+}
+
+.Footer {
+    background-color: #34004D;
+    padding: 20px 64px;
+    color: white;
+}
+
+.Footer1 {
+    height: 229px;
+}
+
+.Footer1 h1 {
+    width: 346px;
+    height: 29px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.Footer1 h2 {
+    max-width: 1276px;
+    font-size: 172px;
+    font-weight: 800;
+}
+
+.Footer2 {
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer2 img {
+    width: 192.24px;
+    height: 140px;
+}
+
+.Footer2 div h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Footer2 div ul li {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px 0;
+}
+
+.Footer2 div li svg {
+    padding: 0 10px 0 5px;
+    width: 12px;
+    height: 12px;
+}
+
+.Footer3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer3 h1 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.Footer button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.Footer a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+
+    &:hover {
+        color: #c285ff;
+    }
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1400px) {
+    .Footer1 h2 {
+        max-width: 742px;
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Header {
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+
+    .Header ul li {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .HeroSectionPC {
+        height: 420px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+
+    .HeroSectionPCLeft h2 {
+        font-size: 54px;
+        width: 410px;
+        height: 125px;
+    }
+
+    .HeroSectionPCLeft h1 {
+        font-size: 70px;
+    }
+
+    .HeroSectionPCRight img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .WhosCamelDigital {
+        padding: 46px 54px;
+    }
+
+    .WhosCamelDigital h1 {
+        width: max-content;
+        height: max-content;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .WhosCamelDigital h2 {
+        max-width: 752px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .OurServices {
+        padding: 46px 54px;
+    }
+
+    .Frame1 h1 {
+        width: max-content;
+        height: max-content;
+        font-size: 18px;
+    }
+
+    .Frame1 h2 {
+        font-size: 14px;
+    }
+
+    .ServicesDivDesktop div {
+        width: max-content;
+        border-radius: 14px;
+        padding: 32px 58px;
+        margin: 30px 0 10px 0;
+    }
+
+    .OurClientsText {
+        width: max-content;
+        height: max-content;
+        font-size: 18px;
+    }
+
+    .OurClients {
+        height: 251px;
+    }
+
+    .LogoDark {
+        width: 351px;
+        height: 254px;
+        padding: 3.69px 0px;
+    }
+
+    .MediaScroll {
+        height: 118px;
+        top: 90px;
+        padding: 10px 20px;
+    }
+
+    .WhyChooseUs {
+        padding: 30px 54px;
+    }
+
+    .WhyChooseUs h1 {
+        height: max-content;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .WhyChooseUs .Qualities {
+        max-width: 650px;
+        margin-bottom: 30px;
+    }
+
+    .WhyChooseUs .Qualities div {
+        width: 300px;
+        height: 160px;
+    }
+
+    .WhyChooseUs img {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 10px;
+    }
+
+    .WhyChooseUs h2 {
+        font-size: 18px;
+    }
+
+    .BookACall {
+        height: max-content;
+        padding: 36px 54px;
+    }
+
+    .BookACall h1 {
+        height: max-content;
+        font-size: 18px;
+    }
+
+    .Frame3 {
+        width: max-content;
+        height: max-content;
+        margin-top: 32px;
+        padding: 10px;
+    }
+
+    .Frame5 {
+        width: 350px;
+        height: max-content;
+    }
+
+    .Frame5 input {
+        padding: 8px 18px;
+        margin-bottom: 14px;
+    }
+
+    .Frame5 div p {
+        bottom: 3%;
+        left: 5.5%;
+        font-size: 10px;
+    }
+
+    .Frame4 {
+        margin: 0 60px;
+    }
+
+    .Frame4 p {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .Frame6 button {
+        height: max-content;
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+
+    .Footer {
+        background-color: #34004D;
+        padding: 20px 34px;
+        color: white;
+    }
+
+    .Footer1 {
+        height: max-content;
+    }
+
+    .Footer1 h1 {
+        width: max-content;
+        height: max-content;
+        font-size: 18px;
+    }
+
+    .Footer1 h2 {
+        max-width: max-content;
+        font-size: 70px;
+    }
+
+    .Footer2 {
+        margin: 30px 0;
+        height: max-content;
+    }
+
+    .Footer2 img {
+        width: 150.24px;
+        height: max-content;
+    }
+
+    .Footer2 div h1 {
+        font-size: 14px;
+    }
+
+    .Footer2 div ul li {
+        font-size: 11px;
+        margin: 12px 0;
+    }
+
+    .Footer2 div li svg {
+        padding: 0 7px 0 3px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .Footer3 h1 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .NotHamburgerIcon {
+        display: none;
+    }
+
+    .HamburgerIcon {
+        display: block;
+    }
+
+    .HeroSectionPC {
+        height: 300px;
+    }
+
+    .HeroSectionPCLeft h2 {
+        font-size: 25px;
+        width: 190px;
+        height: max-content;
+    }
+
+    .HeroSectionPCLeft h1 {
+        font-size: 36px;
+        height: max-content;
+        width: max-content;
+    }
+
+    .HeroSectionPCRight img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .WhosCamelDigital {
+        height: 150px;
+        padding: 20px 54px 0px 54px;
+    }
+
+    .WhosCamelDigital h1 {
+        font-size: 15px;
+    }
+
+    .WhosCamelDigital h2 {
+        max-width: 450px;
+        font-size: 11px;
+    }
+
+    .OurServices {
+        padding: 0px 54px 20px 54px;
+    }
+
+    .Frame1 h1 {
+        font-size: 15px;
+    }
+
+    .Frame1 h2 {
+        font-size: 11px;
+    }
+
+    .ServicesDivDesktop {
+        margin-top: 30px;
+    }
+
+    .ServicesDivDesktop div {
+        padding: 12px 28px;
+        margin: 20px 0 10px 0;
+    }
+
+    .ServicesDivDesktop div img {
+        height: 44px;
+        width: 44px;
+        padding: 2px;
+    }
+
+    .ServicesDivDesktop div h1 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .OurClientsText {
+        top: 16px;
+        left: 44px;
+        font-size: 15px;
+    }
+
+    .OurClients {
+        height: 200px;
+    }
+
+    .LogoDark {
+        width: 270px;
+        height: 200px;
+    }
+
+    .MediaScroll {
+        height: max-content;
+        top: 70px;
+        padding: 0px 15px;
+    }
+
+    .MediaScroll img {
+        width: max-content;
+        height: max-content;
+        transform: scale(0.7);
+    }
+
+    .WhyChooseUs {
+        padding: 30px 34px;
+    }
+
+    .WhyChooseUs h1 {
+        font-size: 15px;
+    }
+
+    .WhyChooseUs .Qualities {
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .WhyChooseUs .Qualities div {
+        width: 230px;
+        height: 130px;
+    }
+
+    .WhyChooseUs img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .WhyChooseUs h2 {
+        font-size: 15px;
+    }
+
+    .BookACall {
+        padding: 26px 24px;
+    }
+
+    .BookACall h1 {
+        font-size: 15px;
+    }
+
+    .Frame3 {
+        margin-top: 22px;
+    }
+
+    .Frame5 {
+        width: 230px;
+    }
+
+    .Frame5 input {
+        padding: 5px 14px;
+        margin-bottom: 12px;
+    }
+
+    .Frame5 div p {
+        bottom: 5%;
+        left: 6.5%;
+        font-size: 8px;
+    }
+
+    .Frame5 button {
+        transform: scale(0.7);
+    }
+
+    .Frame4 {
+        margin: 0 50px;
+    }
+
+    .Frame4 p {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .Frame6 button {
+        transform: scale(0.7);
+    }
+
+    .Footer {
+        padding: 10px 54px;
+    }
+
+    .Footer1 h1 {
+        font-size: 15px;
+    }
+
+    .Footer1 h2 {
+        font-size: 60px;
+    }
+
+    .Footer2 {
+        margin: 20px 0;
+    }
+
+    .Footer2 img {
+        width: 100.24px;
+    }
+
+    .Footer2 div h1 {
+        font-size: 11px;
+    }
+
+    .Footer2 div ul li {
+        font-size: 8px;
+        margin: 9px 0;
+    }
+
+    .Footer2 div li svg {
+        padding: 0 6px 0 2px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .Footer3 h1 {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .Header {
+        height: 40px;
+        padding: 0 24px;
+    }
+
+    .Header img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .HamburgerIcon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .HamburgerIcon div svg:hover {
+        transform: scale(1.1);
+    }
+
+    .HamburgerIcon div svg:hover {
+        transform: scale(0.95);
+    }
+
+    .HamburgerIcon div ul {
+        margin-top: 1rem;
+    }
+
+    .HamburgerIcon div ul li {
+        font-size: 16px;
+    }
+
+    .HamburgerIcon div ul li button {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .HeroSectionPC {
+        height: 200px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .HeroSectionPC::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        background-color: rgba(255, 255, 255, 0.8);
+        filter: blur(10px);
+        pointer-events: none;
+    }
+
+    .HeroSectionPCLeft h2 {
+        font-size: 24px;
+        width: 185px;
+    }
+
+    .HeroSectionPCLeft h1 {
+        font-size: 24px;
+    }
+
+    .HeroBtn {
+        display: block;
+    }
+
+    .HeroSectionPCRight img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .WhosCamelDigital {
+        padding: 32px 24px;
+        height: 224px;
+    }
+
+    .WhosCamelDigital h1 {
+        font-size: 16px;
+    }
+
+    .WhosCamelDigital h2 {
+        max-width: 350px;
+        font-size: 16px;
+    }
+
+    .OurServices {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .Frame1 h1 {
+        font-size: 16px;
+    }
+
+    .Frame1 h2 {
+        font-size: 16px;
+    }
+
+    .ServicesDivDesktop {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .ServicesDivDesktop div {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: row;
+        width: 310px;
+        height: 72px;
+        padding: 12px 16px;
+        border-radius: 16px;
+    }
+
+    .ServicesDivDesktop div img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .ServicesDivDesktop div h1 {
+        font-size: 16px;
+        width: max-content;
+        margin: 0;
+        margin-left: 16px;
+    }
+
+    .OurClientsText {
+        top: 20px;
+        left: 24px;
+        font-size: 16px;
+    }
+
+    .OurClients {
+        height: 150px;
+    }
+
+    .LogoDark {
+        width: 200px;
+        height: 150px;
+    }
+
+    .MediaScroll {
+        height: 70px;
+        top: 50px;
+        padding: 0px 5px;
+        gap: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .MediaScroll img {
+        transform: scale(0.65);
+    }
+
+    .WhyChooseUs {
+        padding: 20px 24px;
+        background-position: center;
+        margin-bottom: 32px;
+    }
+
+    .WhyChooseUs h1 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .WhyChooseUs .Qualities {
+        display: flex;
+        width: 328px;
+        flex-direction: row;
+        margin-bottom: 8px;
+    }
+
+    .WhyChooseUs .Qualities div {
+        width: 160px;
+        height: 99px;
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .WhyChooseUs .Qualities div img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .WhyChooseUs .Qualities div h2 {
+        font-size: 16px;
+    }
+
+    .BookACall {
+        padding: 0px 16px 26px 16px;
+    }
+
+    .BookACall h1 {
+        font-size: 16px;
+        margin: 0;
+
+    }
+
+    .Frame3 {
+        width: 328px;
+        height: 326px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Frame5 button {
+        width: 100px;
+        height: 35px;
+        padding: 8px 24px;
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: left;
+        transform: scale(1);
+        font-weight: 400;
+    }
+
+    .Frame5 form {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Frame5 form div input {
+        width: 307px;
+        height: 37px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+
+    .Frame5 div p {
+        font-size: 12px;
+        bottom: 2%;
+    }
+
+    .Frame4 {
+        margin: 34px 60px;
+        text-align: center;
+    }
+
+    .Frame4 hr {
+        border-bottom: 2px solid #BFBFBF;
+        width: 162%;
+        transform: translate(-50%);
+    }
+
+    .Frame4 p {
+        font-size: 14px;
+        left: 50%;
+        font-weight: 400;
+    }
+
+    .Frame6 {
+        display: block;
+    }
+
+    .Frame6 button {
+        width: 128px;
+        height: 35px;
+        padding: 8px 24px;
+        transform: scale(1);
+    }
+
+    .Footer {
+        padding: 16px;
+    }
+
+    .Footer1 h1 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .Footer1 h2 {
+        width: max-content;
+        font-size: 44px;
+        font-weight: 800;
+    }
+
+    .Footer2 {
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .Footer2 img {
+        display: none;
+    }
+
+    .FooterCompany {
+        display: none;
+    }
+
+    .Footer2 {
+        height: max-content;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Footer2 div {
+        width: 328px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .Footer2 div h1 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .Footer2 div ul li {
+        font-size: 14px;
+        font-weight: 200;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .Footer2 div li svg {
+        padding: 0 6px 0 2px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .Footer3 h1 {
+        font-size: 20px;
+    }
+
+    .popup-content {
+        width: 80%;
+        height: 30%;
+        padding: 30px 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 16px;
+    }
+
+    .popup-content p {
+        font-size: 14px;
+    }
+
+    .popup-content .fa-xmark {
+        font-size: 1.8rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
