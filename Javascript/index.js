@@ -3,6 +3,7 @@ const NavBtn = document.querySelectorAll('.Header li button');
 const bars = document.querySelector(".fa-bars");
 const xmark = document.querySelector(".fa-xmark");
 const hamburgerMenu = document.querySelector(".HamburgerMenu");
+const HeroBtn = document.querySelectorAll(".HeroBtn");
 
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -30,14 +31,21 @@ NavBtn.forEach((btn) => {
     };
 });
 
+HeroBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        let sectionId = btn.getAttribute('data-custom');
+        scrollToSection(sectionId);
+    });
+});
+
 // Form Handling and Popup Functionality
 const form = document.querySelector("form");
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
 const onSubmit = document.getElementById('SubmitForm');
-const PopupNotification=document.querySelector(".popup-overlay");
-const PopupClose=document.querySelector(".closePopup");
+const PopupNotification = document.querySelector(".popup-overlay");
+const PopupClose = document.querySelector(".closePopup");
 
 const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
@@ -83,7 +91,7 @@ onSubmit.onclick = (event) => {
     if (hasError) {
         console.log("Form not submitted: Fields are missing or invalid.");
         return;
-    }else{
+    } else {
         PopupNotification.classList.remove("hidden");
     }
 
@@ -91,7 +99,7 @@ onSubmit.onclick = (event) => {
     console.log('Form submitted');
 };
 
-PopupClose.onclick=()=>{
+PopupClose.onclick = () => {
     PopupNotification.classList.add("hidden");
 }
 
@@ -106,7 +114,7 @@ function validatePhone(phone) {
 }
 
 // Footter Functionality
-const FooterNavigationBar=document.querySelectorAll(".FooterCompany ul li button");
+const FooterNavigationBar = document.querySelectorAll(".FooterCompany ul li button");
 FooterNavigationBar.forEach((btn) => {
     btn.onclick = () => {
         let sectionId = btn.getAttribute('data-custom');

@@ -9,7 +9,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
 .hidden {
     display: none !important;
 }
@@ -47,7 +46,6 @@ body::-webkit-scrollbar {
     color: #262626;
 }
 
-
 .Header ul li button {
     border: none;
     background-color: transparent;
@@ -77,11 +75,9 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
-
     &:hover {
         transform: scale(1.2);
     }
-
     &:active {
         transform: scale(0.9);
     }
@@ -127,7 +123,6 @@ body::-webkit-scrollbar {
     pointer-events: none;
 }
 
-
 .HeroSectionPCLeft h2 {
     font-size: 64px;
     color: #262626;
@@ -147,7 +142,7 @@ body::-webkit-scrollbar {
 }
 
 .HeroBtn {
-    display: none;
+    /* display: none; */
     width: 128px;
     height: 35px;
     padding: 8px 24px;
@@ -159,12 +154,10 @@ body::-webkit-scrollbar {
     font-weight: 600;
     cursor: pointer;
     transition: all 300ms;
-    
-    &:hover{
+    &:hover {
         background-color: #800099;
     }
-
-    &:active{
+    &:active {
         box-shadow: 0px 3px 6px 0px #AA00FF40;
     }
 }
@@ -183,33 +176,26 @@ body::-webkit-scrollbar {
     0% {
         transform: rotate(0deg);
     }
-
     1% {
         transform: rotate(1deg);
     }
-
     25% {
         transform: rotate(30deg);
     }
-
     30% {
         transform: rotate(29deg);
     }
-
     50% {
         transform: rotate(-30deg);
     }
-
     100% {
         transform: rotate(0deg);
     }
 }
 
-
 .WhosCamelDigital {
     width: 100%;
-    height: 206px;
-    padding: 56px 64px;
+    padding: 50px 64px;
 }
 
 .Header li button:hover {
@@ -230,7 +216,6 @@ body::-webkit-scrollbar {
 }
 
 .WhosCamelDigital h2 {
-    max-width: 900px;
     color: #262626;
     font-weight: 400;
     font-size: 16px;
@@ -328,20 +313,61 @@ body::-webkit-scrollbar {
 }
 
 .MediaScroll {
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 128px;
     top: 117px;
     padding: 16px 30px;
     background-image: linear-gradient(#d9d9d937, rgba(211, 123, 255, 0.328));
-    display: grid;
-    gap: 80px;
-    grid-auto-flow: column;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-inline: contain;
     backdrop-filter: blur(3px);
+    overflow: hidden;
 }
+
+.MediaWrapper1,
+.MediaWrapper2 {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    user-select: none;
+}
+
+.MediaWrapper1 {
+    animation: 15s scrollX infinite linear;
+    margin-left: 3rem;
+}
+
+.MediaWrapper2 {
+    animation: 15s scrollX infinite linear;
+    margin-left: 3rem;
+}
+
+.MediaWrapper1 div,
+.MediaWrapper2 div {
+    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MediaWrapper img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes scrollX {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Hide scrollbar */
 
 .MediaScroll::-webkit-scrollbar {
     display: none;
@@ -403,17 +429,12 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     padding: 0.5px;
     background: linear-gradient(90deg, rgba(217, 217, 217, 0.5) 0%, rgba(211, 123, 255, 0.5) 100%);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: -1;
 }
-
 
 .WhyChooseUs .Qualities div:hover {
     box-shadow: 0px 4px 12px 0px #4D4D4D40;
@@ -438,8 +459,12 @@ body::-webkit-scrollbar {
     height: 431px;
     padding: 56px 64px 56px 64px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Temp CSS property*/
     flex-direction: column;
     align-items: center;
+    /* Temp CSS property*/
 }
 
 .BookACall h1 {
@@ -448,6 +473,10 @@ body::-webkit-scrollbar {
     font-size: 24px;
     font-weight: 600;
     color: #8000FF;
+    text-align: center;
+    /* Temporay CSS property*/
+    margin-bottom: 32px;
+    /* Temporay CSS property*/
 }
 
 .Frame3 {
@@ -643,8 +672,9 @@ body::-webkit-scrollbar {
     margin: 16px 0;
 }
 
-.Footer2 div li svg {
-    padding: 0 10px 0 5px;
+.Footer2 div li .fa-brands,
+.Footer2 div li .fa-solid {
+    margin: 0 5px 0 10px;
     width: 12px;
     height: 12px;
 }
@@ -666,7 +696,6 @@ body::-webkit-scrollbar {
     border: none;
     cursor: pointer;
     transition: all 0.4s;
-
     &:hover {
         transform: scale(1.1);
     }
@@ -676,7 +705,6 @@ body::-webkit-scrollbar {
     color: white;
     text-decoration: none;
     transition: all 0.4s;
-
     &:hover {
         color: #c285ff;
     }
@@ -684,6 +712,7 @@ body::-webkit-scrollbar {
 
 
 /* Responsiveness */
+
 @media screen and (max-width: 1400px) {
     .Footer1 h2 {
         max-width: 742px;
@@ -696,217 +725,176 @@ body::-webkit-scrollbar {
         padding-left: 54px;
         padding-right: 54px;
     }
-
     .Header ul li {
         margin-left: 15px;
         margin-right: 15px;
     }
-
     .HeroSectionPC {
         height: 420px;
         padding-left: 54px;
         padding-right: 54px;
     }
-
     .HeroSectionPCLeft h2 {
         font-size: 54px;
         width: 410px;
         height: 125px;
     }
-
     .HeroSectionPCLeft h1 {
         font-size: 70px;
     }
-
     .HeroSectionPCRight img {
         width: 280px;
         height: 280px;
     }
-
     .WhosCamelDigital {
         padding: 46px 54px;
     }
-
     .WhosCamelDigital h1 {
         width: max-content;
         height: max-content;
         font-size: 18px;
         margin-top: 5px;
     }
-
     .WhosCamelDigital h2 {
         max-width: 752px;
         font-size: 14px;
         margin-top: 8px;
     }
-
     .OurServices {
         padding: 46px 54px;
     }
-
     .Frame1 h1 {
         width: max-content;
         height: max-content;
         font-size: 18px;
     }
-
     .Frame1 h2 {
         font-size: 14px;
     }
-
     .ServicesDivDesktop div {
         width: max-content;
         border-radius: 14px;
         padding: 32px 58px;
         margin: 30px 0 10px 0;
     }
-
     .OurClientsText {
         width: max-content;
         height: max-content;
         font-size: 18px;
     }
-
     .OurClients {
         height: 251px;
     }
-
     .LogoDark {
         width: 351px;
         height: 254px;
         padding: 3.69px 0px;
     }
-
     .MediaScroll {
         height: 118px;
         top: 90px;
         padding: 10px 20px;
     }
-
     .WhyChooseUs {
         padding: 30px 54px;
     }
-
     .WhyChooseUs h1 {
         height: max-content;
         font-size: 18px;
         margin-bottom: 15px;
     }
-
     .WhyChooseUs .Qualities {
         max-width: 650px;
         margin-bottom: 30px;
     }
-
     .WhyChooseUs .Qualities div {
         width: 300px;
         height: 160px;
     }
-
     .WhyChooseUs img {
         width: 44px;
         height: 44px;
         margin-bottom: 10px;
     }
-
     .WhyChooseUs h2 {
         font-size: 18px;
     }
-
     .BookACall {
         height: max-content;
         padding: 36px 54px;
     }
-
     .BookACall h1 {
         height: max-content;
         font-size: 18px;
     }
-
     .Frame3 {
         width: max-content;
         height: max-content;
         margin-top: 32px;
         padding: 10px;
     }
-
     .Frame5 {
         width: 350px;
         height: max-content;
     }
-
     .Frame5 input {
         padding: 8px 18px;
         margin-bottom: 14px;
     }
-
     .Frame5 div p {
         bottom: 3%;
         left: 5.5%;
         font-size: 10px;
     }
-
     .Frame4 {
         margin: 0 60px;
     }
-
     .Frame4 p {
         font-size: 12px;
         padding: 12px;
     }
-
     .Frame6 button {
         height: max-content;
         padding: 7px 20px;
         font-size: 14px;
     }
-
     .Footer {
         background-color: #34004D;
         padding: 20px 34px;
         color: white;
     }
-
     .Footer1 {
         height: max-content;
     }
-
     .Footer1 h1 {
         width: max-content;
         height: max-content;
         font-size: 18px;
     }
-
     .Footer1 h2 {
         max-width: max-content;
         font-size: 70px;
     }
-
     .Footer2 {
         margin: 30px 0;
         height: max-content;
     }
-
     .Footer2 img {
         width: 150.24px;
         height: max-content;
     }
-
     .Footer2 div h1 {
         font-size: 14px;
     }
-
     .Footer2 div ul li {
         font-size: 11px;
         margin: 12px 0;
     }
-
     .Footer2 div li svg {
         padding: 0 7px 0 3px;
         width: 10px;
         height: 10px;
     }
-
     .Footer3 h1 {
         font-size: 12px;
     }
@@ -916,260 +904,204 @@ body::-webkit-scrollbar {
     .NotHamburgerIcon {
         display: none;
     }
-
     .HamburgerIcon {
         display: block;
     }
-
     .HeroSectionPC {
         height: 300px;
     }
-
     .HeroSectionPCLeft h2 {
         font-size: 25px;
         width: 190px;
         height: max-content;
     }
-
     .HeroSectionPCLeft h1 {
         font-size: 36px;
         height: max-content;
         width: max-content;
     }
-
     .HeroSectionPCRight img {
         width: 200px;
         height: 200px;
     }
-
     .WhosCamelDigital {
         height: 150px;
         padding: 20px 54px 0px 54px;
     }
-
     .WhosCamelDigital h1 {
         font-size: 15px;
     }
-
     .WhosCamelDigital h2 {
-        max-width: 450px;
         font-size: 11px;
     }
-
     .OurServices {
         padding: 0px 54px 20px 54px;
     }
-
     .Frame1 h1 {
         font-size: 15px;
     }
-
     .Frame1 h2 {
         font-size: 11px;
     }
-
     .ServicesDivDesktop {
         margin-top: 30px;
     }
-
     .ServicesDivDesktop div {
         padding: 12px 28px;
         margin: 20px 0 10px 0;
     }
-
     .ServicesDivDesktop div img {
         height: 44px;
         width: 44px;
         padding: 2px;
     }
-
     .ServicesDivDesktop div h1 {
         font-size: 15px;
         margin-top: 10px;
     }
-
     .OurClientsText {
         top: 16px;
         left: 44px;
         font-size: 15px;
     }
-
     .OurClients {
         height: 200px;
     }
-
     .LogoDark {
         width: 270px;
         height: 200px;
     }
-
     .MediaScroll {
         height: max-content;
         top: 70px;
         padding: 0px 15px;
     }
-
     .MediaScroll img {
         width: max-content;
         height: max-content;
         transform: scale(0.7);
     }
-
     .WhyChooseUs {
         padding: 30px 34px;
     }
-
     .WhyChooseUs h1 {
         font-size: 15px;
     }
-
     .WhyChooseUs .Qualities {
         max-width: 500px;
         margin-bottom: 20px;
     }
-
     .WhyChooseUs .Qualities div {
         width: 230px;
         height: 130px;
     }
-
     .WhyChooseUs img {
         width: 34px;
         height: 34px;
     }
-
     .WhyChooseUs h2 {
         font-size: 15px;
     }
-
     .BookACall {
         padding: 26px 24px;
     }
-
     .BookACall h1 {
         font-size: 15px;
     }
-
     .Frame3 {
         margin-top: 22px;
     }
-
     .Frame5 {
         width: 230px;
     }
-
     .Frame5 input {
         padding: 5px 14px;
         margin-bottom: 12px;
     }
-
     .Frame5 div p {
         bottom: 5%;
         left: 6.5%;
         font-size: 8px;
     }
-
     .Frame5 button {
         transform: scale(0.7);
     }
-
     .Frame4 {
         margin: 0 50px;
     }
-
     .Frame4 p {
         font-size: 10px;
         padding: 10px;
     }
-
     .Frame6 button {
         transform: scale(0.7);
     }
-
     .Footer {
         padding: 10px 54px;
     }
-
     .Footer1 h1 {
         font-size: 15px;
     }
-
     .Footer1 h2 {
         font-size: 60px;
     }
-
     .Footer2 {
         margin: 20px 0;
     }
-
     .Footer2 img {
         width: 100.24px;
     }
-
     .Footer2 div h1 {
         font-size: 11px;
     }
-
     .Footer2 div ul li {
         font-size: 8px;
         margin: 9px 0;
     }
-
     .Footer2 div li svg {
         padding: 0 6px 0 2px;
         width: 8px;
         height: 8px;
     }
-
     .Footer3 h1 {
         font-size: 8px;
     }
 }
 
 @media screen and (max-width: 550px) {
-
     .Header {
         height: 40px;
         padding: 0 24px;
     }
-
     .Header img {
         height: 40px;
         width: 40px;
     }
-
     .HamburgerIcon svg {
         width: 32px;
         height: 32px;
     }
-
     .HamburgerIcon div svg:hover {
         transform: scale(1.1);
     }
-
     .HamburgerIcon div svg:hover {
         transform: scale(0.95);
     }
-
     .HamburgerIcon div ul {
         margin-top: 1rem;
     }
-
     .HamburgerIcon div ul li {
         font-size: 16px;
     }
-
     .HamburgerIcon div ul li button {
         font-size: 15px;
         font-weight: 600;
     }
-
     .HeroSectionPC {
         height: 200px;
         padding-left: 24px;
         padding-right: 24px;
     }
-
     .HeroSectionPC::after {
         content: '';
         position: absolute;
@@ -1181,59 +1113,46 @@ body::-webkit-scrollbar {
         filter: blur(10px);
         pointer-events: none;
     }
-
     .HeroSectionPCLeft h2 {
         font-size: 24px;
         width: 185px;
     }
-
     .HeroSectionPCLeft h1 {
         font-size: 24px;
     }
-
     .HeroBtn {
         display: block;
     }
-
     .HeroSectionPCRight img {
         width: 120px;
         height: 120px;
     }
-
     .WhosCamelDigital {
         padding: 32px 24px;
-        height: 224px;
+        height: max-content;
     }
-
     .WhosCamelDigital h1 {
         font-size: 16px;
     }
-
     .WhosCamelDigital h2 {
-        max-width: 350px;
         font-size: 16px;
     }
-
     .OurServices {
         padding-left: 24px;
         padding-right: 24px;
     }
-
     .Frame1 h1 {
         font-size: 16px;
     }
-
     .Frame1 h2 {
         font-size: 16px;
     }
-
     .ServicesDivDesktop {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         margin-top: 20px;
     }
-
     .ServicesDivDesktop div {
         display: flex;
         align-items: center;
@@ -1244,34 +1163,28 @@ body::-webkit-scrollbar {
         padding: 12px 16px;
         border-radius: 16px;
     }
-
     .ServicesDivDesktop div img {
         height: 40px;
         width: 40px;
     }
-
     .ServicesDivDesktop div h1 {
         font-size: 16px;
         width: max-content;
         margin: 0;
         margin-left: 16px;
     }
-
     .OurClientsText {
         top: 20px;
         left: 24px;
         font-size: 16px;
     }
-
     .OurClients {
         height: 150px;
     }
-
     .LogoDark {
         width: 200px;
         height: 150px;
     }
-
     .MediaScroll {
         height: 70px;
         top: 50px;
@@ -1280,55 +1193,44 @@ body::-webkit-scrollbar {
         display: flex;
         align-items: center;
     }
-
     .MediaScroll img {
         transform: scale(0.65);
     }
-
     .WhyChooseUs {
         padding: 20px 24px;
         background-position: center;
         margin-bottom: 32px;
     }
-
     .WhyChooseUs h1 {
         font-size: 16px;
         margin-bottom: 16px;
     }
-
     .WhyChooseUs .Qualities {
         display: flex;
         width: 328px;
         flex-direction: row;
         margin-bottom: 8px;
     }
-
     .WhyChooseUs .Qualities div {
         width: 160px;
         height: 99px;
         padding: 12px 16px;
         border-radius: 8px;
     }
-
     .WhyChooseUs .Qualities div img {
         width: 40px;
         height: 40px;
     }
-
     .WhyChooseUs .Qualities div h2 {
         font-size: 16px;
     }
-
     .BookACall {
         padding: 0px 16px 26px 16px;
     }
-
     .BookACall h1 {
         font-size: 16px;
         margin: 0;
-
     }
-
     .Frame3 {
         width: 328px;
         height: 326px;
@@ -1336,7 +1238,6 @@ body::-webkit-scrollbar {
         display: flex;
         flex-direction: column;
     }
-
     .Frame5 button {
         width: 100px;
         height: 35px;
@@ -1347,14 +1248,12 @@ body::-webkit-scrollbar {
         transform: scale(1);
         font-weight: 400;
     }
-
     .Frame5 form {
         width: max-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .Frame5 form div input {
         width: 307px;
         height: 37px;
@@ -1362,123 +1261,99 @@ body::-webkit-scrollbar {
         border-radius: 16px;
         margin-bottom: 16px;
     }
-
     .Frame5 div p {
         font-size: 12px;
         bottom: 2%;
     }
-
     .Frame4 {
         margin: 34px 60px;
         text-align: center;
     }
-
     .Frame4 hr {
         border-bottom: 2px solid #BFBFBF;
         width: 162%;
         transform: translate(-50%);
     }
-
     .Frame4 p {
         font-size: 14px;
         left: 50%;
         font-weight: 400;
     }
-
     .Frame6 {
         display: block;
     }
-
     .Frame6 button {
         width: 128px;
         height: 35px;
         padding: 8px 24px;
         transform: scale(1);
     }
-
     .Footer {
         padding: 16px;
     }
-
     .Footer1 h1 {
         font-size: 14px;
         font-weight: 400;
     }
-
     .Footer1 h2 {
         width: max-content;
         font-size: 44px;
         font-weight: 800;
     }
-
     .Footer2 {
         margin: 0;
         margin-top: 20px;
     }
-
     .Footer2 img {
         display: none;
     }
-
     .FooterCompany {
         display: none;
     }
-
     .Footer2 {
         height: max-content;
         flex-direction: column;
         justify-content: center;
     }
-
     .Footer2 div {
         width: 328px;
         text-align: center;
         margin-bottom: 2rem;
     }
-
     .Footer2 div h1 {
         font-size: 16px;
         margin-bottom: 20px;
     }
-
     .Footer2 div ul li {
         font-size: 14px;
         font-weight: 200;
         margin: 0;
         margin-bottom: 16px;
     }
-
     .Footer2 div li svg {
         padding: 0 6px 0 2px;
         width: 12px;
         height: 12px;
     }
-
     .Footer3 h1 {
         font-size: 20px;
     }
-
     .popup-content {
         width: 80%;
         height: 30%;
         padding: 30px 20px;
     }
-
     .popup-content h2 {
         font-size: 16px;
     }
-
     .popup-content p {
         font-size: 14px;
     }
-
     .popup-content .fa-xmark {
         font-size: 1.8rem;
-
         &:hover {
             transform: scale(1.1);
         }
-
         &:active {
             transform: scale(0.95);
         }
